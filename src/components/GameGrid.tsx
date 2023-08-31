@@ -10,7 +10,7 @@ interface Props {
 }
 
 function GameGrid({ gameQuery }: Props) {
-  const { data, error, isloading } = useGames(gameQuery);
+  const { data, error, isLoading } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
 
   const skeletonLoadingCard = () => {
@@ -37,7 +37,7 @@ function GameGrid({ gameQuery }: Props) {
       spacing={6}
       padding="10px"
     >
-      {isloading ? skeletonLoadingCard() : gameCardData()}
+      {isLoading ? skeletonLoadingCard() : gameCardData()}
     </SimpleGrid>
   );
 }
